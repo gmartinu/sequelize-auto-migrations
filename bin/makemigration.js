@@ -106,7 +106,7 @@ if (fs.existsSync(path.join(migrationsDir, '_current.json')))
 
 
 // save current state
-currentState.revision = previousState.revision + 1;
+currentState.revision = Math.floor(Date.now() /1000); //Save in TimeStamp seconds to avoid ordering problem
 fs.writeFileSync(path.join(migrationsDir, '_current.json'), JSON.stringify(currentState, null, 4) );
 
 // write migration to file
