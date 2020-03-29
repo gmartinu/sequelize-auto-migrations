@@ -50,8 +50,8 @@ if (options.help)
     process.exit(0);
 }
 
-const sequelize = require(modelsDir).database;
-const queryInterface = sequelize.getQueryInterface();
+const sequelize = require(modelsDir).sequelize;
+const queryInterface = sequelize.queryInterface;
 
 // execute all migration from
 let fromRevision = options.rev;

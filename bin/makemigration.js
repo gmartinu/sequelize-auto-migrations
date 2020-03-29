@@ -69,9 +69,9 @@ try {
 } catch (e) { }
 
 //console.log(path.join(migrationsDir, '_current.json'), JSON.parse(fs.readFileSync(path.join(migrationsDir, '_current.json') )))
-let sequelize = require(modelsDir);
+let sequelize = require(modelsDir).sequelize;
 
-let models = sequelize.sequelize.models;
+let models = sequelize.models;
 
 currentState.tables = migrate.reverseModels(sequelize, models);
 
