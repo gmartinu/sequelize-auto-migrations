@@ -3,7 +3,7 @@ Migration generator &amp;&amp; runner for sequelize
 
 This package provide two tools:
 * `makemigration` - tool for create new migrations
-* `runmigration` - tool for apply created by first tool migrations - IS BROKEN, i'm still trying to fix.
+* ~`runmigration`~ - tool for apply created by first tool migrations - IS BROKEN, i'm still trying to fix.
 * `sequelize db:migrate` - Use this instead for do the migrations!
 
 ## Install
